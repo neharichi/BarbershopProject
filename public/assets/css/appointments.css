@@ -1,0 +1,105 @@
+
+
+   form#reservationForm {
+    margin-top: 50px;
+  }
+  
+  #reservationForm textarea {
+    resize: none;
+  }
+  
+  button.submit {
+    text-transform: uppercase;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  
+    border: 1px solid black;
+    color: white;
+    background-color: darkred;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+
+    -webkit-animation-name: start; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: start;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  
+  button.submit:hover {
+    background-color: gray;
+    color: white;
+  }
+  
+  button.submit:focus {
+    outline: 0;         /* This gets rid of the blue outline around the button when the button is clicked */
+  }
+
+  .modal-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.modal1Title {
+    color: #e73a46;     /* Same color as bootstrap btn btn-danger */
+}
+
+.modal-body {
+    margin: 16px 0px 0px 0px;
+
+    background-color: none;     /* Change color to show position of modal-body */
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.modalFooterButton {
+    width: 100px;
+    height: 40px;
+  
+    padding: 0px 1px 0px 0px;   /* Offset button text position to compensate for the italic font and the optical illusion it creates */
+    border: none;
+    border-radius: 5px;
+  
+    background-color: #FFC948;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+  
+    cursor: pointer;
+  
+    float: right;
+}
+  
+.modalFooterButton:hover {
+    background-color: black;
+    color: white;
+}
+  
+.modalFooterButton:focus {
+    outline: 0;         /* This gets rid of the blue outline around the button when the button is clicked */
+}
+
+#apptImage {
+  position: relative;
+  bottom: 430px;
+  right: 50px;
+  border-radius: 25px;
+  border-color: darkred;
+  border-style: solid;
+  border-width: 5px;
+}

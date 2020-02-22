@@ -1,0 +1,33 @@
+  
+<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog">
+		<div class="loginmodal-container">
+			<h1 class="">Log In To Book an Appointment</h1><br>
+			<div id="barber-icon">
+				<img src="https://mississippibarberacademy.com/wp-content/uploads/2017/09/barber-pole-preloader-500.gif" 
+				alt="Barber Pole" style="width:125px; height:125px; margin-left: 29%; margin-bottom:10%; margin-top:-15%;">
+			</div>
+
+			{{!-- FORM DOESN'T ALLOW TO REGISTER USER IF NAV IS INSERTED IN RESITRATION.HANDLEBARS --}}
+		  <form class="login">
+		  	<div id="username-form" class="form-group col-lg-12">
+					<label>Username</label>
+					<input id="username-input-2" type="text" name="user" placeholder="Username">
+					<small id="username-feedback-2" class=""></small>
+				</div>
+				<div id="password-form" class="form-group col-lg-12">
+					<label>Password</label>
+					<input id="password-input-2" type="password" name="pass" placeholder="Password">
+					<small id="password-feedback-2" class=""></small>
+				</div>
+				<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+		  </form>
+		  {{!-- END OF COMMENT --}}
+		  <div class="login-help">
+				<a href="/users/signup">Register</a> - <a href="/password">Forgot Password</a>
+		  </div>
+		</div>
+	</div>
+</div>

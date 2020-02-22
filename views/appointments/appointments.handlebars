@@ -1,0 +1,234 @@
+  <link rel="stylesheet" href="/assets/css/appointments.css">
+    <link rel="stylesheet" href="/assets/css/grayscale.css">
+    {{> nav }}
+    {{> login-modal }}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section class="container" id="registration-container">  
+    <!-- PAGE HEADING -->
+<div class="container-page">				
+			<div class="col-md-12"> 
+            <br>
+            <br>   
+            
+            <h1 class="dark-grey">Make A Reservation</h1>  
+			</div>
+
+<!-- MAIN CONTENT OF PAGE -->
+<!-- BOOTSTRAP GRID -->
+
+<!-- Max width 960px container -->
+{{!-- <div class="container mainContentContainer"> --}}
+<div class="container">    
+            <!-- Put any bootstrap elements into class="container" to set max width to 960px and have it centered on page -->
+    
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+        
+        <form id="reservationForm">
+        
+        <div class="form-group">
+            <label for="title">Customer Name:</label>
+            <input type="text" class="form-control" id="title" autocomplete="off">  <!-- autocomplete="off" is used to turn off the autocomplete of input field -->
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" class="form-control" id="mobile" autocomplete="off"> <!-- autocomplete="off" is used to turn off the autocomplete of input field -->
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" autocomplete="off">  <!-- autocomplete="off" is used to turn off the autocomplete of input field -->
+        </div>
+            
+        <div class="form-group">
+            <label for="category">Select Barber:</label>
+            <select class="custom-select" id="category">
+            <option selected value=""></option>
+            <option value="Tony">Andy</option>
+            <option value="Bob">Jeff</option>
+            <option value="Jim">Efren</option>
+            <option value="Jim">Neha</option>
+            <option value="Jim">Henry</option>
+            </select>
+        </div>
+
+        <!-- Datepicker -->
+        <div class='form-group'>
+            <label for="body"></label>
+            <label for="category">Select Date:</label>
+            <br>
+            <input type="text" class="form-control" id="datepicker" autocomplete="off"> <!-- autocomplete="off" is used to turn off the autocomplete of input field -->
+        </div>
+
+        <div class="form-group">
+            <label for="category">Select Time:</label>
+            <select class="custom-select" id="time">
+            <option selected value=""></option>
+            <option value="10am">10am</option>
+            <option value="11am">11am</option>
+            <option value="12pm">12pm</option>
+            <option value="1pm">1pm</option>
+            <option value="2pm">2pm</option>
+            <option value="3pm">3pm</option>
+            <option value="4pm">4pm</option>
+            <option value="5pm">5pm</option>
+            <option value="6pm">6pm</option>
+            <option value="7pm">7pm</option>
+            </select>
+        </div>
+
+        <br>
+
+        <button type="submit" class="submit">Submit</button>
+        <br>
+        <br>
+        <br>
+        </form>
+        </div>
+    </div>  
+    <img id="apptImage" src="https://t3.ftcdn.net/jpg/02/86/18/16/240_F_286181603_O4z6YXGUA5mTK2sD6fvfrAYd4RLLCPEQ.jpg" alt="barber chair"
+    align="right"; style="width: 475px; height: 300px;">
+
+{{!-- code will be inserted for the customer to view theri appointmnet --}}
+
+
+
+<!-- MAIN CONTENT OF PAGE -->
+<!-- BOOTSTRAP GRID -->
+
+{{!-- <br></br>
+
+<!-- Max width 960px container -->
+<div class="container mainContentContainer">         <!-- Put any bootstrap elements into class="container" to set max width to 960px and have it centered on page -->
+    
+    <!-- Row 1 -->
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+        <button class="refreshDataButton">Refresh Data</button>
+    </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row mt-4">  <!-- m stands for margin, t stands for top, mt means margin top-->
+    <div class="col-md-6 offset-md-3">
+        <p class="selectBarberText">Select Barber:</p>
+    </div>
+    </div>
+    
+    <!-- Row 3 -->
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="form-group">
+        <select class="custom-select" id="category">
+            <option selected value="">All Barbers</option>
+            <option value="Tony">Tony</option>
+            <option value="Bob">Bob</option>
+            <option value="Jim">Jim</option>
+        </select>
+        </div>
+    </div>
+    </div>
+
+    <!-- Row 4 (Reservation Data from barberPortal.js populates inside class="reservation-container") -->
+    <div class="row mt-2">    <!-- m stands for margin, t stands for top, mt means margin top-->
+    <div class="col-md-6 offset-md-3 reservation-container"></div>
+    </div>
+
+    <br>
+
+</div> --}}
+
+
+
+</section>
+
+<br>
+<br>
+<br>
+
+<!-- MODALS -->
+
+<!-- Modal 1 (Please fill all required fields) -->
+<div id="pleaseFillAllFieldsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title modal1Title"><strong>Attention!</strong></h2>
+            </div>
+            <div class="modal-body text-center">
+                <p>Please enter all required fields</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="closeButton modalFooterButton" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal 2 (Confirm) -->
+<div id="confirmModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Confirm</strong></h2>
+            </div>
+            <div class="modal-body text-center">
+            <p>Are you sure you would like to submit your reservation with 
+                <br>
+                <span id="modalConfirmReservationBarber"></span> on 
+                <span id="modalConfirmReservationDate"></span> at 
+                <span id="modalConfirmReservationTime"></span>?
+            </p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="modalFooterButton" data-dismiss="modal">Close</button>
+            <button type="button" class="confirmButton modalFooterButton">Confirm</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal 3 (Success!) -->
+<div id="successModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Success!</strong></h2>
+            </div>
+            <div class="modal-body text-center">
+                <p>Your reservation with <span id="modalSuccessReservationBarber"></span> has been submitted successfully!</p>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="successModalCloseButton modalFooterButton">Close</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    {{!-- Footer --}}
+    {{> footer }}
+
+

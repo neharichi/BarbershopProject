@@ -1,0 +1,97 @@
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    {{> nav }}
+    {{> login-modal }}
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body" id="bg-carbon">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Fresh & Flow Barbershop</h1>
+                        <h2 id="header-text">Years of Experience that can't be matched!</h2>
+                        <h3 id="header-text2"><a id="loginNow" class="page-scroll" data-toggle="modal" data-target="#login-modal">Login Now</a> To Make An Appointment:</h3>
+                        <a href="#contact" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1 class="contactL" id="feel">Feel Fresh & Flow</h1>
+                <h4 class="contactL">Follow Us On...</h4>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://www.instagram.com/freshandflowbarbershop/" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/FreshAndFlowBarbershop" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.yelp.com/biz/fresh-and-flow-barbershop-los-angeles" class="btn btn-default btn-lg"><i class="fa fa-yelp fa-fw"></i> <span class="network-name">Yelp</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+
+
+
+    <!-- Map Section -->
+    <!-- <div>
+    <img id="gmap" src="https://lh3.googleusercontent.com/e8tqEE53Uysj5wA67ppTGwwR5oL1Ll7SjzWGLV_GwDVS8RpVkSeW8XBHlyb-RV8zJrP4u9rTwk9ZoErFHhQg74dzPJ2bHWA3XwtG3ndGMIgLRFNRAe8gm5DFHVzUQGDtCHcsXPdJrNxh7iGEIOpiMHcTDSTQUdCOUaexsaOuCpfJB1i2Tw9F8rWE0UaAGExMXt_QuxeWGyhEtEgzfaeghCZoKVMehI6tJXcN1vAxfWQrkO0kX-j1trUVPBGRjbfTIUL8TOK9dO4gmvwLnoqrluULpHUkwlrpdBsKSmBt0BZMUQLw53v-a0nGDt762dMUIaCKk80s00WM1jNeQd0a2DsSt0JfvLQIsyODvwV9pETWfiReOyLlYxMRaAcuHr_S0BkI0EqQ1YRPZ6ffTuzLtK85jGGmb4PxMBrgCfN13a7-sBTUkcSBMQyQgclsFVVldHjKFcvdv58-qiveKMiHGPGirAnbIimTfEVHvfLO09_d_eQCs6oK9cX8_C_zzilIppV9sQUV2c1MzlVCZrkeZt9cIP2qtGv-8UoQ94xN32oU69lGky6-CLk4ArIgSdGE04pYBiNSQDnO5RheqZjzDaf-hFFqpebQLZjsfAFESlvJA4LOI-1FIbPBgMyeNrk7__U6VlqWCXSuDCmKG-zqkYPbwxr51MGHrPn-ZIq9CJ0hluYkhyR2=w2880-h1056-no" alt="gmap"> 
+    </div> -->
+    
+    <!-- Map Section -->
+    <div id="map" style="height: 300px; width: 81%; margin: 0px 145px; border-radius: 10px; border-color: darkred; border-style: solid;  border-width: 5px;"></div>
+    <br>
+    <br>
+
+
+
+    <!-- Footer -->
+{{> footer }}
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+        infoWindow = new google.maps.InfoWindow;
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
